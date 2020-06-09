@@ -1,2 +1,3 @@
-# web-app
-Веб-приложение
+# Web Application
+
+Пишется на **Java Spring** 
