@@ -9,9 +9,12 @@ let connectingElement = document.querySelector('.connecting');
 
 let stompClient = null;
 let username = null;
-let colors = ['#2196F3', '#32c787', '#00BCD4', '#ff5652',
-                
-                '#ffc107', '#ff85af', '#FF9800', '#39bbb0'];
+
+let colors = [
+    '#2196F3', '#32c787', '#00BCD4', '#ff5652',
+
+    '#ffc107', '#ff85af', '#FF9800', '#39bbb0'
+];
 
 
 function connect(event) {
@@ -35,7 +38,7 @@ function onConnected() {
     stompClient.send("/app/chat.addUser",
         {},
         JSON.stringify({ sender: username, type: 'JOIN' })
-    )
+    );
     connectingElement.classList.add('hidden');
     setFocus('message');
 }
