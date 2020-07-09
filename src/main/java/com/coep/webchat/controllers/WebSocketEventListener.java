@@ -22,7 +22,7 @@ public class WebSocketEventListener {
 
     @EventListener
     public void connectListener(SessionConnectedEvent event) {
-        logger.info("Подключение к новым веб-сокетам");
+        logger.info("Connected to new sockets...");
     }
 
     @EventListener
@@ -31,7 +31,7 @@ public class WebSocketEventListener {
         StompHeaderAccessor headerAccessor = StompHeaderAccessor.wrap(message);
         String username = (String) headerAccessor.getSessionAttributes().get("username");
         if (username != null) {
-            logger.info(username + " вышел из чата");
+            logger.info(username + " left the chat");
 
             ChatMessage chatMessage = new ChatMessage();
             chatMessage.setType(ChatMessage.MessageType.LEAVE);
