@@ -42,7 +42,7 @@ function onConnected() {
 
 
 function onError(error) {
-    connectingElement.textContent = 'Не можем подключиться к веб-сокету. Обнови странницу!';
+    connectingElement.textContent = 'Couldn\'t connect to sockets. Restart the page!';
     connectingElement.style.color = '#ff4743';
 }
 
@@ -74,11 +74,11 @@ function onMessageReceived(payload) {
     
     if (message.type === 'JOIN') {
         messageElement.classList.add('event-message');
-        message.content = message.sender + ' присоединился';
+        message.content = message.sender + ' joined';
     } 
     else if (message.type === 'LEAVE') {
         messageElement.classList.add('event-message');
-        message.content = message.sender + ' вышел';
+        message.content = message.sender + ' left';
     } 
     else {
         messageElement.classList.add('chat-message');
