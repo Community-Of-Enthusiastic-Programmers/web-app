@@ -31,7 +31,7 @@ public class ChatController {
         String username = chatMessage.getSender();
         headerAccessor.getSessionAttributes().put("username", username);
 
-        logger.info(chatMessage.getSender() + " подключился");
+        logger.info(chatMessage.getSender() + " joined");
 
         String time = LocalDateTimeUtils.formatTime(LocalDateTime.now());
         chatMessage.setTime(time);
