@@ -1,3 +1,3 @@
 # Web Application
 
-Пишется на **Java Spring** 
+Written in **Java** with **Spring** 
